@@ -8,9 +8,7 @@ import android.util.Log;
 import android.widget.Toast;
 
 public class MyStartServiceReceiver extends BroadcastReceiver {
-
     private static final String TAG = MyStartServiceReceiver.class.getSimpleName();
-
     @Override
     public void onReceive(Context context, Intent intent) {
 
@@ -20,7 +18,6 @@ public class MyStartServiceReceiver extends BroadcastReceiver {
         Bundle bundle = intent.getExtras();
         if(bundle!=null)
         {
-
             if(bundle.containsKey("values"))
             {
                 Toast.makeText(context,""+bundle.getString("values"),Toast.LENGTH_LONG).show();
@@ -40,7 +37,6 @@ public class MyStartServiceReceiver extends BroadcastReceiver {
             {
                 Log.d(TAG,"snooz key is null");
             }
-
         }
         else
         {
